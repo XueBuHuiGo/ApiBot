@@ -1,0 +1,30 @@
+Servers:
+  # 监听端口
+  Address: '0.0.0.0:5701'
+Bot:
+  # CQ HTTP的HTTP地址
+  BotApi: 'http://127.0.0.1:5700/'
+  # 机器人QQ和主人QQ
+  BotQq: 123456
+  OwnQq: 123456
+OpenAi:
+  # 你的 OpenAI API Key,可以在 https://beta.openai.com/account/api-keys 获取
+  ApiKey: 'sk-xxxxxxxx'
+  # 使用的模型，默认是 text-davinci-003
+  Model: 'gpt-3.5-turbo'
+  # 每次对话最大生成字符数
+  MaxTokens: 2048
+  # 对话温度，越大越随机 参照https://algowriting.medium.com/gpt-3-temperature-setting-101-41200ff0d0be
+  Temperature: 0.7
+  # 以下参数自己去看官方文档，我也不懂，自己调配
+  # 以下参数范围[0,1],官方默认为1.0
+  Top_p: 1.0
+  # 以下两个参数范围[-2.0,2.0],官方默认为0
+  Frequency_penalty: 0.0
+  Presence_penalty: 0.0
+Redis:
+  # 如果不开启的话，无法实现ChatGPT的连续对话（建议开启）（需要服务器有Redis环境）
+  Switch: true
+  Addr: '127.0.0.1:6379'
+  Password: ''
+  DB: 1
